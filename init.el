@@ -4,6 +4,8 @@
 
 ;;; Code:
 
+(require 'prelude-mode)
+
 (add-hook 'prelude-mode-hook
           (lambda ()
             ;; unset

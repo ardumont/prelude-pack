@@ -13,10 +13,10 @@
             (define-key prelude-mode-map (kbd "C-c g") nil)
 
             ;; redefine
-            (local-set-key (kbd "C-c b g")   'prelude-google)
-            (local-set-key (kbd "C-c b G")   'prelude-github)
+            (local-set-key (kbd "C-c b o")   'prelude-google)
+            (local-set-key (kbd "C-c b g")   'prelude-github)
             (local-set-key (kbd "C-c b y")   'prelude-youtube)
-            (local-set-key (kbd "C-c b u")   'prelude-duckduckgo)
+            (local-set-key (kbd "C-c b d")   'prelude-duckduckgo)
             (local-set-key (kbd "C-c v u")   'prelude-view-url)
             (local-set-key (kbd "C-c v t")   'prelude-visit-term-buffer)
             (local-set-key (kbd "C-c w s")   'prelude-swap-windows)

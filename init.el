@@ -6,6 +6,10 @@
 
 (add-hook 'prelude-mode-hook
           (lambda ()
+            ;; unset
+            (define-key prelude-mode-map (kbd "C-c s") nil)
+
+            ;; redefine
             (local-set-key (kbd "C-c b g") 'prelude-google)
             (local-set-key (kbd "C-c b G") 'prelude-github)
             (local-set-key (kbd "C-c b y") 'prelude-youtube)

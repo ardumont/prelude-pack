@@ -8,6 +8,7 @@
           (lambda ()
             ;; unset
             (define-key prelude-mode-map (kbd "C-c s") nil)
+            (define-key prelude-mode-map (kbd "C-c g") nil)
 
             ;; redefine
             (local-set-key (kbd "C-c b g") 'prelude-google)

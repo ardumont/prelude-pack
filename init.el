@@ -11,6 +11,13 @@
             ;; unset
             (define-key prelude-mode-map (kbd "C-c s") nil)
             (define-key prelude-mode-map (kbd "C-c g") nil)
+            (define-key prelude-mode-map (kbd "C-c G") nil)
+            (define-key prelude-mode-map (kbd "C-c U") nil)
+            (define-key prelude-mode-map (kbd "C-c e") nil)
+            (define-key prelude-mode-map (kbd "C-c d") nil)
+            (define-key prelude-mode-map (kbd "C-c M-d") nil)
+            (define-key prelude-mode-map (kbd "C-c u") nil)
+            (define-key prelude-mode-map (kbd "C-c y") nil)
 
             ;; redefine
             (local-set-key (kbd "C-c b o")   'prelude-google)

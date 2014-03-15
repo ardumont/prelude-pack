@@ -41,8 +41,8 @@
             (define-key prelude-mode-map (kbd "C-c m l")   'magit-log)
             (define-key prelude-mode-map (kbd "C-c m f")   'magit-file-log)
             (define-key prelude-mode-map (kbd "C-c m B")   'magit-blame-mode)
-            (define-key prelude-mode-map (kbd "C-c r u")   'move-text-up)
-            (define-key prelude-mode-map (kbd "C-c r d")   'move-text-down)
+            (define-key prelude-mode-map (kbd "C-c r M-v") 'move-text-up)
+            (define-key prelude-mode-map (kbd "C-c r v")   'move-text-down)
             (define-key prelude-mode-map (kbd "C-M-q")     'prelude-indent-defun)))
 
 ;;;.prelude-mode-el ends here

@@ -9,6 +9,7 @@
 (add-hook 'prelude-mode-hook
           (lambda ()
             ;; unset
+            (define-key prelude-mode-map (kbd "C-c o") nil)
             (define-key prelude-mode-map (kbd "C-c s") nil)
             (define-key prelude-mode-map (kbd "C-c g") nil)
             (define-key prelude-mode-map (kbd "C-c G") nil)
@@ -19,6 +20,7 @@
             (define-key prelude-mode-map (kbd "C-c u") nil)
             (define-key prelude-mode-map (kbd "C-c y") nil)
             (define-key prelude-mode-map (kbd "C-c r") nil)
+            (define-key prelude-mode-map (kbd "C-c t") nil)
 
             ;; redefine
             (define-key prelude-mode-map (kbd "C-c b o")   'prelude-google)

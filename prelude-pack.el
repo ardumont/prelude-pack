@@ -1,4 +1,4 @@
-;;; prelude-pack.el --- Prelude's default binding
+;;; prelude-pack.el --- Prelude-pack's default binding override
 
 ;;; Commentary:
 
@@ -45,4 +45,5 @@
             (define-key prelude-mode-map (kbd "C-c r v")   'move-text-down)
             (define-key prelude-mode-map (kbd "C-M-q")     'prelude-indent-defun)))
 
-;;;.prelude-mode-el ends here
+(provide 'prelude-pack)
+;;; prelude-pack.el ends here

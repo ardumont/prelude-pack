@@ -21,6 +21,10 @@
             (define-key prelude-mode-map (kbd "C-c y") nil)
             (define-key prelude-mode-map (kbd "C-c r") nil)
             (define-key prelude-mode-map (kbd "C-c t") nil)
+            (define-key prelude-mode-map (kbd "C-c f") nil)
+            (define-key prelude-mode-map (kbd "C-c D") nil)
+            (define-key prelude-mode-map (kbd "C-c I") nil)
+            (define-key prelude-mode-map (kbd "C-c S") nil)
 
             ;; redefine
             (define-key prelude-mode-map (kbd "C-c b o")   'prelude-google)
@@ -43,6 +47,10 @@
             (define-key prelude-mode-map (kbd "C-c m B")   'magit-blame-mode)
             (define-key prelude-mode-map (kbd "C-c r M-v") 'move-text-up)
             (define-key prelude-mode-map (kbd "C-c r v")   'move-text-down)
+            (define-key prelude-mode-map (kbd "C-c f r")   'prelude-recentf-ido-find-file)
+            (define-key prelude-mode-map (kbd "C-c f D")   'prelude-delete-file-and-buffer)
+            (define-key prelude-mode-map (kbd "C-c f I")   'prelude-find-user-init-file)
+            (define-key prelude-mode-map (kbd "C-c f S")   'prelude-find-shell-init-file)
             (define-key prelude-mode-map (kbd "C-M-q")     'prelude-indent-defun)))
 
 (provide 'prelude-pack)

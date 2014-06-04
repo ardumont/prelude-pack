@@ -50,6 +50,8 @@
             (define-key prelude-mode-map (kbd "C-c f r")   'prelude-recentf-ido-find-file)
             (define-key prelude-mode-map (kbd "C-c f D")   'prelude-delete-file-and-buffer)
             (define-key prelude-mode-map (kbd "C-c f I")   'prelude-find-user-init-file)
+            (define-key prelude-mode-map (kbd "C-c f x")   (lambda () (interactive) (find-file-other-window "~/.xmonad/xmonad.hs")))
+            (define-key prelude-mode-map (kbd "C-c f s")   (lambda () (interactive) (find-file-other-window "~/.stumpwmrc")))
             (define-key prelude-mode-map (kbd "C-c f S")   'prelude-find-shell-init-file)
             (define-key prelude-mode-map (kbd "C-M-q")     'prelude-indent-defun)))
 

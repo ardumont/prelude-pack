@@ -53,8 +53,14 @@
             (define-key prelude-mode-map (kbd "C-c f x")   (lambda () (interactive) (find-file-other-window "~/.xmonad/xmonad.hs")))
             (define-key prelude-mode-map (kbd "C-c f s")   (lambda () (interactive) (find-file-other-window "~/.stumpwmrc")))
             (define-key prelude-mode-map (kbd "C-c f p")   (lambda () (interactive) (find-file-other-window "~/.prelude-packs/prelude-packs.el")))
+            (define-key prelude-mode-map (kbd "C-c f t")   'prelude-pack/open-global-todo-file!)
             (define-key prelude-mode-map (kbd "C-c f S")   'prelude-find-shell-init-file)
             (define-key prelude-mode-map (kbd "C-M-q")     'prelude-indent-defun)))
+
+(defun prelude-pack/open-global-todo-file! ()
+  "Open the user's org todo file."
+  (interactive)
+  (find-file "~/org/todo.org"))
 
 (provide 'prelude-pack)
 ;;; prelude-pack.el ends here

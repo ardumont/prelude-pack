@@ -54,6 +54,7 @@
             (define-key prelude-mode-map (kbd "C-c f s")   'prelude-pack/open-stumpwm-init-file!)
             (define-key prelude-mode-map (kbd "C-c f p")   'prelude-pack/open-prelude-packs-file!)
             (define-key prelude-mode-map (kbd "C-c f t")   'prelude-pack/open-global-todo-file!)
+            (define-key prelude-mode-map (kbd "C-c f n")   'prelude-pack/open-nixos-configuration-file!)
             (define-key prelude-mode-map (kbd "C-c f S")   'prelude-find-shell-init-file)
             (define-key prelude-mode-map (kbd "C-M-q")     'prelude-indent-defun)))
 
@@ -76,6 +77,11 @@
   "Open the user's org todo file."
   (interactive)
   (find-file "~/org/todo.org"))
+
+(defun prelude-pack/open-nixos-configuration-file! ()
+  "Open nixos' configuration file."
+  (interactive)
+  (find-file "/etc/nixos/configuration.nix"))
 
 (provide 'prelude-pack)
 ;;; prelude-pack.el ends here

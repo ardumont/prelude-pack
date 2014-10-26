@@ -37,7 +37,7 @@
             (define-key prelude-mode-map (kbd "C-c r D")   'prelude-delete-file-and-buffer)
             (define-key prelude-mode-map (kbd "C-c r M-d") 'prelude-duplicate-and-comment-current-line-or-region)
             (define-key prelude-mode-map (kbd "C-c r d")   'prelude-duplicate-current-line-or-region)
-            (define-key prelude-mode-map (kbd "C-c r R")   'prelude-rename-file-and-buffer)
+            (define-key prelude-mode-map (kbd "C-c r R")   'prelude-rename-buffer-and-file)
             (define-key prelude-mode-map (kbd "C-c r K")   'prelude-kill-other-buffers)
             (define-key prelude-mode-map (kbd "C-c r j")   'prelude-top-join-line)
             (define-key prelude-mode-map (kbd "C-c r k")   'prelude-kill-whole-line)

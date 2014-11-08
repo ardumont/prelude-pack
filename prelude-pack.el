@@ -55,6 +55,7 @@
             (define-key prelude-mode-map (kbd "C-c f p")   'prelude-pack/open-prelude-packs-file!)
             (define-key prelude-mode-map (kbd "C-c f t")   'prelude-pack/open-global-todo-file!)
             (define-key prelude-mode-map (kbd "C-c f n")   'prelude-pack/open-nixos-configuration-file!)
+            (define-key prelude-mode-map (kbd "C-c f N")   'prelude-pack/open-nix-configuration-file!)
             (define-key prelude-mode-map (kbd "C-c f S")   'prelude-find-shell-init-file)
             (define-key prelude-mode-map (kbd "C-M-q")     'prelude-indent-defun)))
 
@@ -82,6 +83,11 @@
   "Open nixos' configuration file."
   (interactive)
   (find-file "/etc/nixos/configuration.nix"))
+
+(defun prelude-pack/open-nix-configuration-file! ()
+  "Open nix' user configuration file."
+  (interactive)
+  (find-file "~/.nixpkgs/config.nix"))
 
 (provide 'prelude-pack)
 ;;; prelude-pack.el ends here

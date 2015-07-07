@@ -54,6 +54,7 @@
             (define-key prelude-mode-map (kbd "C-c f s")   'prelude-pack/open-stumpwm-init-file!)
             (define-key prelude-mode-map (kbd "C-c f p")   'prelude-pack/open-prelude-packs-file!)
             (define-key prelude-mode-map (kbd "C-c f t")   'prelude-pack/open-global-todo-file!)
+            (define-key prelude-mode-map (kbd "C-c f T")   'prelude-pack/open-tmux-configuration-file!)
             (define-key prelude-mode-map (kbd "C-c f n")   'prelude-pack/open-nixos-configuration-file!)
             (define-key prelude-mode-map (kbd "C-c f N")   'prelude-pack/open-nix-configuration-file!)
             (define-key prelude-mode-map (kbd "C-c f S")   'prelude-find-shell-init-file)
@@ -88,6 +89,11 @@
   "Open nix' user configuration file."
   (interactive)
   (find-file "~/.nixpkgs/config.nix"))
+
+(defun prelude-pack/open-tmux-configuration-file! ()
+  "Open nix' user configuration file."
+  (interactive)
+  (find-file "~/.tmux.conf"))
 
 (provide 'prelude-pack)
 ;;; prelude-pack.el ends here

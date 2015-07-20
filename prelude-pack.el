@@ -25,7 +25,9 @@
             (define-key prelude-mode-map (kbd "C-c D") nil)
             (define-key prelude-mode-map (kbd "C-c I") nil)
             (define-key prelude-mode-map (kbd "C-c S") nil)
+            (define-key prelude-mode-map (kbd "C-c i") nil)
 
+            (define-key prelude-mode-map (kbd "C-c g i")   'prelude-goto-symbol)
             ;; redefine
             (define-key prelude-mode-map (kbd "C-c b o")   'prelude-google)
             (define-key prelude-mode-map (kbd "C-c b g")   'prelude-github)

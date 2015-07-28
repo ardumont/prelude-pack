@@ -87,12 +87,12 @@
   (find-file "/etc/nixos/configuration.nix"))
 
 (defun prelude-pack/open-nix-configuration-file! ()
-  "Open nix' user configuration file."
+  "Open nix's user configuration file."
   (interactive)
   (find-file "~/.nixpkgs/config.nix"))
 
 (defun prelude-pack/open-tmux-configuration-file! ()
-  "Open nix' user configuration file."
+  "Open tmux's user configuration file."
   (interactive)
   (find-file "~/.tmux.conf"))
 

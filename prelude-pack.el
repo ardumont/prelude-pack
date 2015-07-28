@@ -58,6 +58,7 @@
                       (define-key prelude-mode-map (kbd "C-c f T")   'prelude-pack/open-tmux-configuration-file!)
                       (define-key prelude-mode-map (kbd "C-c f n")   'prelude-pack/open-nixos-configuration-file!)
                       (define-key prelude-mode-map (kbd "C-c f N")   'prelude-pack/open-nix-configuration-file!)
+                      (define-key prelude-mode-map (kbd "C-c f h")   'prelude-pack/open-ssh-config)
                       (define-key prelude-mode-map (kbd "C-c f S")   'prelude-find-shell-init-file)
                       (define-key prelude-mode-map (kbd "C-M-q")     'prelude-indent-defun))))
 
@@ -95,6 +96,11 @@
   "Open tmux's user configuration file."
   (interactive)
   (find-file "~/.tmux.conf"))
+
+(defun prelude-pack/open-ssh-config ()
+  "Open ssh's user configuration file."
+  (interactive)
+  (find-file "~/.ssh/config"))
 
 (provide 'prelude-pack)
 ;;; prelude-pack.el ends here

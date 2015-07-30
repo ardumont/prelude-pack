@@ -4,6 +4,46 @@
 
 ;;; Code:
 
+(defun prelude-pack/open-xmonad-init-file! ()
+  "Open xmonad's init file."
+  (interactive)
+  (find-file "~/.xmonad/xmonad.hs"))
+
+(defun prelude-pack/open-stumpwm-init-file! ()
+  "Open stumpwm's init file."
+  (interactive)
+  (find-file "~/.stumpwmrc"))
+
+(defun prelude-pack/open-prelude-packs-file! ()
+  "Open prelude-packs's init file."
+  (interactive)
+  (find-file "~/.prelude-packs/prelude-packs.el"))
+
+(defun prelude-pack/open-global-todo-file! ()
+  "Open the user's org todo file."
+  (interactive)
+  (find-file "~/org/todo.org"))
+
+(defun prelude-pack/open-nixos-configuration-file! ()
+  "Open nixos' configuration file."
+  (interactive)
+  (find-file "/etc/nixos/configuration.nix"))
+
+(defun prelude-pack/open-nix-configuration-file! ()
+  "Open nix's user configuration file."
+  (interactive)
+  (find-file "~/.nixpkgs/config.nix"))
+
+(defun prelude-pack/open-tmux-configuration-file! ()
+  "Open tmux's user configuration file."
+  (interactive)
+  (find-file "~/.tmux.conf"))
+
+(defun prelude-pack/open-ssh-config ()
+  "Open ssh's user configuration file."
+  (interactive)
+  (find-file "~/.ssh/config"))
+
 (use-package prelude-mode
   :config (add-hook 'prelude-mode-hook
                     (lambda ()
@@ -61,46 +101,6 @@
                       (define-key prelude-mode-map (kbd "C-c f h")   'prelude-pack/open-ssh-config)
                       (define-key prelude-mode-map (kbd "C-c f S")   'prelude-find-shell-init-file)
                       (define-key prelude-mode-map (kbd "C-M-q")     'prelude-indent-defun))))
-
-(defun prelude-pack/open-xmonad-init-file! ()
-  "Open xmonad's init file."
-  (interactive)
-  (find-file "~/.xmonad/xmonad.hs"))
-
-(defun prelude-pack/open-stumpwm-init-file! ()
-  "Open stumpwm's init file."
-  (interactive)
-  (find-file "~/.stumpwmrc"))
-
-(defun prelude-pack/open-prelude-packs-file! ()
-  "Open prelude-packs's init file."
-  (interactive)
-  (find-file "~/.prelude-packs/prelude-packs.el"))
-
-(defun prelude-pack/open-global-todo-file! ()
-  "Open the user's org todo file."
-  (interactive)
-  (find-file "~/org/todo.org"))
-
-(defun prelude-pack/open-nixos-configuration-file! ()
-  "Open nixos' configuration file."
-  (interactive)
-  (find-file "/etc/nixos/configuration.nix"))
-
-(defun prelude-pack/open-nix-configuration-file! ()
-  "Open nix's user configuration file."
-  (interactive)
-  (find-file "~/.nixpkgs/config.nix"))
-
-(defun prelude-pack/open-tmux-configuration-file! ()
-  "Open tmux's user configuration file."
-  (interactive)
-  (find-file "~/.tmux.conf"))
-
-(defun prelude-pack/open-ssh-config ()
-  "Open ssh's user configuration file."
-  (interactive)
-  (find-file "~/.ssh/config"))
 
 (provide 'prelude-pack)
 ;;; prelude-pack.el ends here

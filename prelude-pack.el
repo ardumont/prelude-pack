@@ -44,6 +44,11 @@
   (interactive)
   (find-file "~/.ssh/config"))
 
+(defun prelude-pack/box-connection-status ()
+  "Open the box connection status."
+  (interactive)
+  (browse-url "http://box/#Fbx.os.app.settings.ConnectionStatus"))
+
 (use-package prelude-mode
   :config (add-hook 'prelude-mode-hook
                     (lambda ()
@@ -72,6 +77,7 @@
                       (define-key prelude-mode-map (kbd "C-c b g")   'prelude-github)
                       (define-key prelude-mode-map (kbd "C-c b y")   'prelude-youtube)
                       (define-key prelude-mode-map (kbd "C-c b d")   'prelude-duckduckgo)
+                      (define-key prelude-mode-map (kbd "C-c b b")   'prelude-pack/box-connection-status)
                       (define-key prelude-mode-map (kbd "C-c v u")   'prelude-view-url)
                       (define-key prelude-mode-map (kbd "C-c v t")   'prelude-visit-term-buffer)
                       (define-key prelude-mode-map (kbd "C-c w s")   'prelude-swap-windows)

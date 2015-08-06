@@ -47,7 +47,7 @@
 (defun prelude-pack-box-connection-status ()
   "Open the box connection status."
   (interactive)
-  (browse-url "http://box/#Fbx.os.app.settings.ConnectionStatus"))
+  (browse-url "http://mafreebox.freebox.fr/#Fbx.os.app.settings.ConnectionStatus"))
 
 (use-package prelude-mode
   :config (add-hook 'prelude-mode-hook

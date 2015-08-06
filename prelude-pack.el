@@ -4,47 +4,47 @@
 
 ;;; Code:
 
-(defun prelude-pack/open-xmonad-init-file! ()
+(defun prelude-pack-open-xmonad-init-file! ()
   "Open xmonad's init file."
   (interactive)
   (find-file "~/.xmonad/xmonad.hs"))
 
-(defun prelude-pack/open-stumpwm-init-file! ()
+(defun prelude-pack-open-stumpwm-init-file! ()
   "Open stumpwm's init file."
   (interactive)
   (find-file "~/.stumpwmrc"))
 
-(defun prelude-pack/open-prelude-packs-file! ()
+(defun prelude-pack-open-prelude-packs-file! ()
   "Open prelude-packs's init file."
   (interactive)
   (find-file "~/.prelude-packs/prelude-packs.el"))
 
-(defun prelude-pack/open-global-todo-file! ()
+(defun prelude-pack-open-global-todo-file! ()
   "Open the user's org todo file."
   (interactive)
   (find-file "~/org/todo.org"))
 
-(defun prelude-pack/open-nixos-configuration-file! ()
+(defun prelude-pack-open-nixos-configuration-file! ()
   "Open nixos' configuration file."
   (interactive)
   (find-file "/etc/nixos/configuration.nix"))
 
-(defun prelude-pack/open-nix-configuration-file! ()
+(defun prelude-pack-open-nix-configuration-file! ()
   "Open nix's user configuration file."
   (interactive)
   (find-file "~/.nixpkgs/config.nix"))
 
-(defun prelude-pack/open-tmux-configuration-file! ()
+(defun prelude-pack-open-tmux-configuration-file! ()
   "Open tmux's user configuration file."
   (interactive)
   (find-file "~/.tmux.conf"))
 
-(defun prelude-pack/open-ssh-config ()
+(defun prelude-pack-open-ssh-config ()
   "Open ssh's user configuration file."
   (interactive)
   (find-file "~/.ssh/config"))
 
-(defun prelude-pack/box-connection-status ()
+(defun prelude-pack-box-connection-status ()
   "Open the box connection status."
   (interactive)
   (browse-url "http://box/#Fbx.os.app.settings.ConnectionStatus"))
@@ -77,7 +77,7 @@
                       (define-key prelude-mode-map (kbd "C-c b g")   'prelude-github)
                       (define-key prelude-mode-map (kbd "C-c b y")   'prelude-youtube)
                       (define-key prelude-mode-map (kbd "C-c b d")   'prelude-duckduckgo)
-                      (define-key prelude-mode-map (kbd "C-c b b")   'prelude-pack/box-connection-status)
+                      (define-key prelude-mode-map (kbd "C-c b b")   'prelude-pack-box-connection-status)
                       (define-key prelude-mode-map (kbd "C-c v u")   'prelude-view-url)
                       (define-key prelude-mode-map (kbd "C-c v t")   'prelude-visit-term-buffer)
                       (define-key prelude-mode-map (kbd "C-c w s")   'prelude-swap-windows)
@@ -97,14 +97,14 @@
                       (define-key prelude-mode-map (kbd "C-c f r")   'prelude-recentf-ido-find-file)
                       (define-key prelude-mode-map (kbd "C-c f D")   'prelude-delete-file-and-buffer)
                       (define-key prelude-mode-map (kbd "C-c f I")   'prelude-find-user-init-file)
-                      (define-key prelude-mode-map (kbd "C-c f x")   'prelude-pack/open-xmonad-init-file!)
-                      (define-key prelude-mode-map (kbd "C-c f s")   'prelude-pack/open-stumpwm-init-file!)
-                      (define-key prelude-mode-map (kbd "C-c f p")   'prelude-pack/open-prelude-packs-file!)
-                      (define-key prelude-mode-map (kbd "C-c f t")   'prelude-pack/open-global-todo-file!)
-                      (define-key prelude-mode-map (kbd "C-c f T")   'prelude-pack/open-tmux-configuration-file!)
-                      (define-key prelude-mode-map (kbd "C-c f n")   'prelude-pack/open-nixos-configuration-file!)
-                      (define-key prelude-mode-map (kbd "C-c f N")   'prelude-pack/open-nix-configuration-file!)
-                      (define-key prelude-mode-map (kbd "C-c f h")   'prelude-pack/open-ssh-config)
+                      (define-key prelude-mode-map (kbd "C-c f x")   'prelude-pack-open-xmonad-init-file!)
+                      (define-key prelude-mode-map (kbd "C-c f s")   'prelude-pack-open-stumpwm-init-file!)
+                      (define-key prelude-mode-map (kbd "C-c f p")   'prelude-pack-open-prelude-packs-file!)
+                      (define-key prelude-mode-map (kbd "C-c f t")   'prelude-pack-open-global-todo-file!)
+                      (define-key prelude-mode-map (kbd "C-c f T")   'prelude-pack-open-tmux-configuration-file!)
+                      (define-key prelude-mode-map (kbd "C-c f n")   'prelude-pack-open-nixos-configuration-file!)
+                      (define-key prelude-mode-map (kbd "C-c f N")   'prelude-pack-open-nix-configuration-file!)
+                      (define-key prelude-mode-map (kbd "C-c f h")   'prelude-pack-open-ssh-config)
                       (define-key prelude-mode-map (kbd "C-c f S")   'prelude-find-shell-init-file)
                       (define-key prelude-mode-map (kbd "C-M-q")     'prelude-indent-defun))))
 

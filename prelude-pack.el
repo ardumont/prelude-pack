@@ -4,45 +4,59 @@
 
 ;;; Code:
 
+(defun prelude-pack-log (&rest msg)
+  "Log MSG."
+  (apply 'message (format "Prelude-Pack - %s" (car msg)) (cdr msg)))
+
+(defun prelude-pack--find-file-if-exists-or-log-not-found (file)
+  "Open a FILE if found or do nothing but log."
+  (if (file-exists-p file)
+      (find-file file)
+    (prelude-pack-log "%s not found, do nothing." file)))
+
 (defun prelude-pack-open-xmonad-init-file! ()
   "Open xmonad's init file."
   (interactive)
-  (find-file "~/.xmonad/xmonad.hs"))
+  (prelude-pack--find-file-if-exists-or-log-not-found "~/.xmonad/xmonad.hs"))
 
 (defun prelude-pack-open-stumpwm-init-file! ()
   "Open stumpwm's init file."
   (interactive)
-  (find-file "~/.stumpwmrc"))
+  (prelude-pack--find-file-if-exists-or-log-not-found "~/.stumpwmrc"))
 
 (defun prelude-pack-open-prelude-packs-file! ()
   "Open prelude-packs's init file."
   (interactive)
-  (find-file "~/.prelude-packs/prelude-packs.el"))
+  (prelude-pack--find-file-if-exists-or-log-not-found "~/.prelude-packs/prelude-packs.el"))
 
 (defun prelude-pack-open-global-todo-file! ()
   "Open the user's org todo file."
   (interactive)
-  (find-file "~/org/todo.org"))
+  (prelude-pack--find-file-if-exists-or-log-not-found "~/org/todo.org"))
+
+(defun prelude-pack-nixos-env-p ()
+  "Predicate to determine if on nixos or not."
+  (prelude-pack--find-file-if-exists-or-log-not-found "/etc/NIXOS"))
 
 (defun prelude-pack-open-nixos-configuration-file! ()
   "Open nixos' configuration file."
   (interactive)
-  (find-file "/etc/nixos/configuration.nix"))
+  (prelude-pack--find-file-if-exists-or-log-not-found "/etc/nixos/configuration.nix"))
 
 (defun prelude-pack-open-nix-configuration-file! ()
   "Open nix's user configuration file."
   (interactive)
-  (find-file "~/.nixpkgs/config.nix"))
+  (prelude-pack--find-file-if-exists-or-log-not-found "~/.nixpkgs/config.nix"))
 
 (defun prelude-pack-open-tmux-configuration-file! ()
   "Open tmux's user configuration file."
   (interactive)
-  (find-file "~/.tmux.conf"))
+  (prelude-pack--find-file-if-exists-or-log-not-found "~/.tmux.conf"))
 
 (defun prelude-pack-open-ssh-config ()
   "Open ssh's user configuration file."
   (interactive)
-  (find-file "~/.ssh/config"))
+  (prelude-pack--find-file-if-exists-or-log-not-found "~/.ssh/config"))
 
 (defun prelude-pack-box-connection-status ()
   "Open the box connection status."

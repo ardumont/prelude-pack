@@ -98,6 +98,7 @@
     (define-key map (kbd "C-c f n")   'prelude-pack-open-nixos-configuration-file!)
     (define-key map (kbd "C-c f N")   'prelude-pack-open-nix-configuration-file!)
     (define-key map (kbd "C-c f h")   'prelude-pack-open-ssh-config)
+    (define-key map (kbd "C-c p")     'projectile-command-map)
     map)
   "Keymap for prelude-pack mode.")
 

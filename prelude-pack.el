@@ -129,7 +129,8 @@
 
 \\{prelude-pack-mode-map}"
   :lighter " PP"
-  :keymap prelude-pack-mode-map)
+  :keymap prelude-pack-mode-map
+  :global t)
 
 (define-globalized-minor-mode global-prelude-pack-mode prelude-pack-mode prelude-pack-on)
 

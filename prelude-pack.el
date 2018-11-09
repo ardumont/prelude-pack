@@ -5,6 +5,7 @@
 ;;; Code:
 
 (require 'crux)
+(require 'projectile)
 
 (defun prelude-pack-log (&rest msg)
   "Log MSG."
@@ -65,28 +66,8 @@
   (interactive)
   (browse-url "http://mafreebox.freebox.fr/#Fbx.os.app.settings.ConnectionStatus"))
 
-(require 'prelude-mode)
-
 (defvar prelude-pack-mode-map
-  (let ((map prelude-mode-map))
-    (define-key map (kbd "C-c o") nil)
-    (define-key map (kbd "C-c s") nil)
-    (define-key map (kbd "C-c g") nil)
-    (define-key map (kbd "C-c G") nil)
-    (define-key map (kbd "C-c U") nil)
-    (define-key map (kbd "C-c e") nil)
-    (define-key map (kbd "C-c d") nil)
-    (define-key map (kbd "C-c M-d") nil)
-    (define-key map (kbd "C-c u") nil)
-    (define-key map (kbd "C-c y") nil)
-    (define-key map (kbd "C-c r") nil)
-    (define-key map (kbd "C-c t") nil)
-    (define-key map (kbd "C-c f") nil)
-    (define-key map (kbd "C-c D") nil)
-    (define-key map (kbd "C-c I") nil)
-    (define-key map (kbd "C-c S") nil)
-    (define-key map (kbd "C-c i") nil)
-    (define-key map (kbd "C-c e") nil)
+  (let ((map (make-sparse-keymap)))
     (define-key map (kbd "C-c v u")   'crux-view-url)
     (define-key map (kbd "C-c v t")   'crux-visit-term-buffer)
     (define-key map (kbd "C-c w s")   'crux-swap-windows)
@@ -101,16 +82,6 @@
     (define-key map (kbd "C-c f D")   'crux-delete-file-and-buffer)
     (define-key map (kbd "C-c f I")   'crux-find-user-init-file)
     (define-key map (kbd "C-M-q")     'crux-indent-defun)
-    (define-key map (kbd "C-c m g")   'magit-status)
-    (define-key map (kbd "C-c m l")   'magit-log)
-    (define-key map (kbd "C-c m f")   'magit-file-log)
-    (define-key map (kbd "C-c m B")   'magit-blame-mode)
-    (define-key map (kbd "C-c r M-v") 'move-text-up)
-    (define-key map (kbd "C-c r v")   'move-text-down)
-    (define-key map (kbd "C-c b o")   'prelude-google)
-    (define-key map (kbd "C-c b g")   'prelude-github)
-    (define-key map (kbd "C-c b y")   'prelude-youtube)
-    (define-key map (kbd "C-c b d")   'prelude-duckduckgo)
     (define-key map (kbd "C-c b b")   'prelude-pack-box-connection-status)
     (define-key map (kbd "C-c f x")   'prelude-pack-open-xmonad-init-file!)
     (define-key map (kbd "C-c f s")   'prelude-pack-open-stumpwm-init-file!)
@@ -120,7 +91,6 @@
     (define-key map (kbd "C-c f n")   'prelude-pack-open-nixos-configuration-file!)
     (define-key map (kbd "C-c f N")   'prelude-pack-open-nix-configuration-file!)
     (define-key map (kbd "C-c f h")   'prelude-pack-open-ssh-config)
-    (define-key map (kbd "C-c f S")   'prelude-find-shell-init-file)
     map)
   "Keymap for prelude-pack mode.")
 

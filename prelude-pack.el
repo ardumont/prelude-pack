@@ -1,4 +1,4 @@
-;;; prelude-pack.el --- Prelude-pack's default binding override
+;;; prelude-pack.el --- prelude-pack's bindings
 
 ;;; Commentary:
 

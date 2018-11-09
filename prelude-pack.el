@@ -37,6 +37,12 @@
   (interactive)
   (prelude-pack--find-file-if-exists-or-log-not-found "~/org/todo.org"))
 
+(defun prelude-pack-open-swh-todo-file! ()
+  "Open the user's swh todo file."
+  (interactive)
+  (let ((swh-todo-file (format "%s/org/todo.org" (getenv "SWH_ENVIRONMENT_HOME"))))
+    (prelude-pack--find-file-if-exists-or-log-not-found swh-todo-file)))
+
 (defun prelude-pack-nixos-env-p ()
   "Predicate to determine if on nixos or not."
   (prelude-pack--find-file-if-exists-or-log-not-found "/etc/NIXOS"))
@@ -84,7 +90,8 @@
     (define-key map (kbd "C-M-q")     'crux-indent-defun)
     (define-key map (kbd "C-c b b")   'prelude-pack-box-connection-status)
     (define-key map (kbd "C-c f x")   'prelude-pack-open-xmonad-init-file!)
-    (define-key map (kbd "C-c f s")   'prelude-pack-open-stumpwm-init-file!)
+    (define-key map (kbd "C-c f s")   'prelude-pack-open-swh-todo-file!)
+    (define-key map (kbd "C-c f S")   'prelude-pack-open-stumpwm-init-file!)
     (define-key map (kbd "C-c f p")   'prelude-pack-open-prelude-packs-file!)
     (define-key map (kbd "C-c f t")   'prelude-pack-open-global-todo-file!)
     (define-key map (kbd "C-c f T")   'prelude-pack-open-tmux-configuration-file!)

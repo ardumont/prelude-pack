@@ -6,6 +6,7 @@
 
 (require 'crux)
 (require 'projectile)
+(projectile-global-mode)
 (require 'helm)
 
 (custom-set-variables '(projectile-completion-system 'helm))

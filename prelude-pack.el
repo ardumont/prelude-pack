@@ -6,6 +6,9 @@
 
 (require 'crux)
 (require 'projectile)
+(require 'helm)
+
+(custom-set-variables '(projectile-completion-system 'helm))
 
 (defun prelude-pack-log (&rest msg)
   "Log MSG."

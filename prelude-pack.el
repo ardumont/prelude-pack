@@ -90,6 +90,12 @@
   (interactive)
   (prelude-pack--find-file-if-exists-or-log-not-found "~/.ssh/config"))
 
+(defun prelude-pack-open-xkeysnail-config ()
+  "Open ssh's user configuration file."
+  (interactive)
+  (prelude-pack--find-file-if-exists-or-log-not-found
+   "~/.config/xkeysnail/config.py"))
+
 (defun prelude-pack-box-connection-status ()
   "Open the box connection status."
   (interactive)
@@ -113,6 +119,7 @@
 	(define-key map (kbd "C-c f r")   'crux-recentf-ido-find-file)
 	(define-key map (kbd "C-c f D")   'crux-delete-file-and-buffer)
 	(define-key map (kbd "C-c f i")   'crux-find-user-init-file)
+	(define-key map (kbd "C-c f x")   'prelude-pack-open-xkeysnail-config)
 	(define-key map (kbd "C-M-q")     'crux-indent-defun)
 	(define-key map (kbd "C-c b b")   'prelude-pack-box-connection-status)
 	(define-key map (kbd "C-c f x")   'prelude-pack-open-xmonad-init-file!)

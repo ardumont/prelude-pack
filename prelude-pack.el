@@ -90,6 +90,7 @@
 	(define-key map (kbd "C-c r K")   'crux-kill-other-buffers)
 	(define-key map (kbd "C-c r j")   'crux-top-join-line)
 	(define-key map (kbd "C-c r k")   'crux-kill-whole-line)
+	(define-key map (kbd "C-c r r")   'revert-buffer)
 	(define-key map (kbd "C-c f r")   'crux-recentf-ido-find-file)
 	(define-key map (kbd "C-c f D")   'crux-delete-file-and-buffer)
 	(define-key map (kbd "C-c f i")   'crux-find-user-init-file)

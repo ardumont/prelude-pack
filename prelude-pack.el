@@ -125,7 +125,7 @@
 	(define-key map (kbd "C-c f r")   'crux-recentf-ido-find-file)
 	(define-key map (kbd "C-c f D")   'crux-delete-file-and-buffer)
 	(define-key map (kbd "C-c f i")   'crux-find-user-init-file)
-	(define-key map (kbd "C-c f x")   'prelude-pack-open-xkeysnail-config)
+	(define-key map (kbd "C-c f k")   'prelude-pack-open-xkeysnail-config)
 	(define-key map (kbd "C-M-q")     'crux-indent-defun)
 	(define-key map (kbd "C-c b b")   'prelude-pack-box-connection-status)
 	(define-key map (kbd "C-c f x")   'prelude-pack-open-xmonad-init-file)
